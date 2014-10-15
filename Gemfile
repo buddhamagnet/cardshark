@@ -2,8 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.4'
 
-# DATABASE
-gem 'sqlite3'
+group :development, :test do
+ gem 'sqlite3'
+end
 
 # PRELOADER
 gem 'spring', group: :development
@@ -20,3 +21,6 @@ gem 'uglifier', '>= 1.3.0'
 
 # APPLICATION-SPECIFIC GEMS
 gem 'foundation-rails'
+
+# HEROKU DEPLOYMENT
+gem 'pg'
