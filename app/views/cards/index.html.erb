@@ -1,5 +1,5 @@
 <div class="12-columns large">
-  <div class="panel"><%= link_to "shuffle", root_path %></div>
+  <div class="panel"><%= link_to "shuffle", shuffle_cards_path %> | <%= link_to "reset", root_path %></div>
 </div>
 
 <% @cards.each do |card| %>
