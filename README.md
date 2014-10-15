@@ -8,3 +8,4 @@ INSTALLATION:
 2. Load the application.
 3. Hit the shuffle link.
 4. Rinse and repeat.
+5. To run on the command line, run bin/rake cards:shuffle.
