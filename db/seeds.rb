@@ -1,6 +1,8 @@
 Suit.destroy_all
 
-Card.where(identifier: "joker").first.delete
+joker = Card.where(identifier: "joker").first
+
+delete joker if joker.present?
 
 Suit.create(name: 'hearts')
 Suit.create(name: 'spades')
