@@ -1,7 +1,10 @@
+<div class="12-columns large">
+  <div class="panel"><%= link_to "shuffle", root_path %></div>
+</div>
+
 <% @cards.each do |card| %>
   <div class="card">
     <%= image_tag card.icon %>
   </div>
 <% end %>
 
-<%= link_to "shuffle", root_path %>
