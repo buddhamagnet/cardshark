@@ -1,2 +1,7 @@
-<h1>Cards#index</h1>
-<p>Find me in app/views/cards/index.html.erb</p>
+<% @cards.each do |card| %>
+  <div class="card">
+    <%= image_tag card.icon %>
+  </div>
+<% end %>
+
+<%= link_to "shuffle", root_path %>
