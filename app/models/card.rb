@@ -4,4 +4,8 @@ class Card < ActiveRecord::Base
   def to_s
     "#{identifier} of #{suit.name}"
   end
+
+  def icon
+    "#{identifier}_#{suit.name}.png"
+  end
 end
