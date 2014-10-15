@@ -1,11 +1,15 @@
 class Card < ActiveRecord::Base
   belongs_to :suit
 
+  def orphaned?
+    suit.nil?
+  end
+
   def to_s
-    "#{identifier} of #{suit.name}"
+    orphaned? ? identifier : "#{identifier} of #{suit.name}"
   end
 
   def icon
-    "#{identifier}_#{suit.name}.png"
+    orphaned? ? "#{identifier}.png" : "#{identifier}_#{suit.name}.png"
   end
 end
